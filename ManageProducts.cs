@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 
 namespace management_system
 {
@@ -16,7 +18,31 @@ namespace management_system
         public ManageProducts()
         {
             InitializeComponent();
-            SqlConnection con = new SqlConnection("@Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\HER EXCELLENCY\\OneDrive\\Documents\\inventory.db.mdf\";Integrated Security=True;Connect Timeout=30")
+            SqlConnection Con = new SqlConnection("@Data Source=(LocalDB)MSSQLLocalDB;AttachDbFilename=C:UsersHER EXCELLENCYOneDriveDocumentsinventory.db.mdf;Integrated Security=True;Connect Timeout=30");
+        }
+
+
+        private void fillcombo()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("selext catName from categooryTbl", Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt= new DataTable();
+            dt.Columns.Add("catName", typeof(string));
+            dt.Load(rdr);
+            prodCat.ValueMember = "catName";
+            prodCat.DataSource = dt;
+            Con.Close();
+
+
+
+        }
+
+
+        private void ManageProducts_Load(object sender, EventArgs e)
+        {
+            fillcombo();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,9 +100,9 @@ namespace management_system
 
         }
 
-        private void ManageProducts_Load(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

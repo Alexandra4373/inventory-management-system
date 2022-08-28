@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 
 namespace management_system
 {
@@ -126,6 +127,11 @@ namespace management_system
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

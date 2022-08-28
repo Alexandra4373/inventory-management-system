@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace management_system
 {
-    public partial class ManageUsers: Form
+    public partial class ManageCustomers : Form
     {
-        public ManageUsers()
+        public ManageCustomers()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
