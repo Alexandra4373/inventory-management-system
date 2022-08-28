@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace management_system
 {
-    public partial class ManageUsers : Form
+    public partial class ManageUsers: Form
     {
         public ManageUsers()
         {
