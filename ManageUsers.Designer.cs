@@ -35,11 +35,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.usernsme = new System.Windows.Forms.Label();
-            this.catName = new System.Windows.Forms.TextBox();
-            this.catDesc = new System.Windows.Forms.TextBox();
-            this.catID = new System.Windows.Forms.TextBox();
+            this.UFullname = new System.Windows.Forms.TextBox();
+            this.UPassword = new System.Windows.Forms.TextBox();
+            this.UName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,26 +108,27 @@
             this.usernsme.TabIndex = 36;
             this.usernsme.Text = "USERNAME";
             // 
-            // catName
+            // UFullname
             // 
-            this.catName.Location = new System.Drawing.Point(113, 141);
-            this.catName.Name = "catName";
-            this.catName.Size = new System.Drawing.Size(165, 20);
-            this.catName.TabIndex = 35;
+            this.UFullname.Location = new System.Drawing.Point(113, 141);
+            this.UFullname.Name = "UFullname";
+            this.UFullname.Size = new System.Drawing.Size(165, 20);
+            this.UFullname.TabIndex = 35;
             // 
-            // catDesc
+            // UPassword
             // 
-            this.catDesc.Location = new System.Drawing.Point(113, 199);
-            this.catDesc.Name = "catDesc";
-            this.catDesc.Size = new System.Drawing.Size(165, 20);
-            this.catDesc.TabIndex = 34;
+            this.UPassword.Location = new System.Drawing.Point(113, 199);
+            this.UPassword.Name = "UPassword";
+            this.UPassword.Size = new System.Drawing.Size(165, 20);
+            this.UPassword.TabIndex = 34;
             // 
-            // catID
+            // UName
             // 
-            this.catID.Location = new System.Drawing.Point(113, 84);
-            this.catID.Name = "catID";
-            this.catID.Size = new System.Drawing.Size(165, 20);
-            this.catID.TabIndex = 33;
+            this.UName.Location = new System.Drawing.Point(113, 84);
+            this.UName.Name = "UName";
+            this.UName.Size = new System.Drawing.Size(165, 20);
+            this.UName.TabIndex = 33;
+            this.UName.TextChanged += new System.EventHandler(this.catID_TextChanged);
             // 
             // label2
             // 
@@ -138,12 +139,12 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "PHONE NUMBER";
             // 
-            // textBox1
+            // UPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 248);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 44;
+            this.UPhone.Location = new System.Drawing.Point(113, 248);
+            this.UPhone.Name = "UPhone";
+            this.UPhone.Size = new System.Drawing.Size(165, 20);
+            this.UPhone.TabIndex = 44;
             // 
             // label1
             // 
@@ -173,7 +174,7 @@
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(816, 545);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UPhone);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
@@ -182,9 +183,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.usernsme);
-            this.Controls.Add(this.catName);
-            this.Controls.Add(this.catDesc);
-            this.Controls.Add(this.catID);
+            this.Controls.Add(this.UFullname);
+            this.Controls.Add(this.UPassword);
+            this.Controls.Add(this.UName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUsers";
@@ -205,11 +206,11 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label usernsme;
-        public System.Windows.Forms.TextBox catName;
-        public System.Windows.Forms.TextBox catDesc;
-        public System.Windows.Forms.TextBox catID;
+        public System.Windows.Forms.TextBox UFullname;
+        public System.Windows.Forms.TextBox UPassword;
+        public System.Windows.Forms.TextBox UName;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox UPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
     }

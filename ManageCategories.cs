@@ -63,10 +63,8 @@ namespace management_system
         }
 
         private void populate()
-        {
-            throw new NotImplementedException();
-        }
-
+        { }
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             catID.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();

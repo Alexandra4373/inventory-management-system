@@ -24,16 +24,7 @@ namespace management_system
 
         private void fillcombo()
         {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("selext catName from categooryTbl", Con);
-            SqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            DataTable dt= new DataTable();
-            dt.Columns.Add("catName", typeof(string));
-            dt.Load(rdr);
-            prodCat.ValueMember = "catName";
-            prodCat.DataSource = dt;
-            Con.Close();
+  
 
 
 

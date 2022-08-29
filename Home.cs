@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace management_system
 {
-    public partial class login : Form
+    public partial class Home : Form
     {
-        public login()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
